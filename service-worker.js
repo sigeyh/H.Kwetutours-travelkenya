@@ -3,8 +3,8 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/public/logo.jpg',
-  '/public/masai-mara.jpg',
-  '/public/diani-beach.jpg',
+  '/public/logo.jpg',
+  '/public/logo.jpg',
   '/public/travel-highlights.mp4'
 ];
 
