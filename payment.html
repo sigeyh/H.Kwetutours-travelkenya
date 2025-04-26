@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Payment Options | Kwetu Tours & Travel</title>
+    <meta name="description" content="Choose your preferred payment method for booking your next adventure with Kwetu Tours & Travel.">
+    <meta name="keywords" content="Kwetu Tours, Payment Methods, M-Pesa, PayPal, Stripe, Book Tours">
+    <meta name="author" content="Kwetu Tours & Travel">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- External Style Links (Bootstrap for layout) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #9b3232;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .payment-section {
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .payment-section h2 {
+            text-align: center;
+            font-size: 30px;
+            color: #9b3232;
+            margin-bottom: 30px;
+        }
+
+        .payment-option {
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .payment-option:hover {
+            transform: translateY(-5px);
+        }
+
+        .payment-option img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .payment-option h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .payment-option p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn-payment {
+            background-color: #9b3232;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-payment:hover {
+            background-color: #7a1f1f;
+        }
+
+        .payment-details {
+            display: none;
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #001f37;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .payment-option {
+                margin-bottom: 15px;
+            }
+
+            .payment-section h2 {
+                font-size: 26px;
+            }
+
+            .btn-payment {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kwetu Tours & Travel Payment Options</h1>
+</header>
+
+<section class="payment-section">
+    <h2>Choose Your Payment Method</h2>
+    <div class="container">
+        <div class="row">
+            <!-- M-Pesa Payment Option -->
+            <div class="col-sm-12 col-md-4">
+                <div class="payment-option">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/M-Pesa_logo.svg/512px-M-Pesa_logo.svg.png" alt="M-Pesa">
+                    <h4>M-Pesa</h4>
+                    <p>Pay using M-Pesa, a popular mobile payment option in East Africa. Fast, secure, and easy to use.</p>
+                    <button class="btn-payment" onclick="showDetails('mpesa')">Pay with M-Pesa</button>
+                    <div id="mpesa-details" class="payment-details">
+                        <p><strong>Till Number:</strong> 123456</p>
+                        <p><strong>Instructions:</strong> Send the payment to the Till Number provided and mention your booking reference in the note.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PayPal Payment Option -->
+            <div class="col-sm-12 col-md-4">
+                <div class="payment-option">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/PayPal_logo_2014.svg" alt="PayPal">
+                    <h4>PayPal</h4>
+                    <p>Use PayPal for a seamless and secure payment experience, available globally.</p>
+                    <button class="btn-payment" onclick="showDetails('paypal')">Pay with PayPal</button>
+                    <div id="paypal-details" class="payment-details">
+                        <p><strong>PayPal Email:</strong> info@kwetutours.com</p>
+                        <p><strong>Instructions:</strong> Log in to your PayPal account and send the amount to the email provided.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stripe Payment Option -->
+            <div class="col-sm-12 col-md-4">
+                <div class="payment-option">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Stripe_logo.svg" alt="Stripe">
+                    <h4>Stripe</h4>
+                    <p>Stripe allows you to pay using credit/debit cards or your bank account. Simple and secure.</p>
+                    <button class="btn-payment" onclick="showDetails('stripe')">Pay with Stripe</button>
+                    <div id="stripe-details" class="payment-details">
+                        <p><strong>Instructions:</strong> Use your credit/debit card to make the payment securely through Stripe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>📧 info@kwetutours.com | ☎️ +254 708902119</p>
+    <p>Follow us on 
+        <a href="#">Instagram</a>, 
+        <a href="#">Facebook</a>, 
+        <a href="#">TikTok</a>
+    </p>
+    <p>&copy; 2025 Kwetu Tours & Travel. All rights reserved.</p>
+</footer>
+
+<script>
+    function showDetails(paymentMethod) {
+        // Hide all details
+        const allDetails = document.querySelectorAll('.payment-details');
+        allDetails.forEach(detail => detail.style.display = 'none');
+
+        // Show the selected payment method details
+        const selectedDetails = document.getElementById(paymentMethod + '-details');
+        selectedDetails.style.display = 'block';
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
