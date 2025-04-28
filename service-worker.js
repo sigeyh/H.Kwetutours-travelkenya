@@ -2,9 +2,9 @@ const CACHE_NAME = 'kwetu-tours-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/public/logo.jpg',
-  '/public/logo.jpg',
-  '/public/logo.jpg',
+  '/public/KWETU TOURS.png',
+  '/public/KWETU TOURS.png',
+  '/public/KWETU TOURS.png',
   '/public/travel-highlights.mp4'
 ];
 
