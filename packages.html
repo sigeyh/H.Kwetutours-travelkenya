@@ -42,6 +42,7 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
+      transition: transform 0.3s ease-in-out;
     }
 
     .package-info {
@@ -135,6 +136,7 @@
   <header>
     <h1>Our Travel Packages</h1>
     <p>Choose your next adventure</p>
+
   </header>
   <div style="background: #ffefef; color: #b83c3c; text-align: center; padding: 15px; font-weight: bold;">
     🔥 Limited Offer: Book Maasai Mara before May 1st and get 10% off!
@@ -154,28 +156,61 @@
       <div class="package-info">
         <h3>Zanzibar Getaway</h3>
         <p>4 nights, flights + resort – From $900</p>
-        <button onclick="openBookingModal()">Book Now</button>
+        <button onclick="openBookingModal()">Book Now</button><br><button onclick="location.href='kanunga FINAL 1A.jpg'">Details</button>
       </div>
     </div>
 
     <div class="package-card">
-      <img src="maasai.jpg" alt="Maasai Mara Safari">
+      <img src="Masai-Mara-From-Tristan-2011-003.jpg.webp" alt="Maasai Mara Safari">
       <div class="package-info">
         <h3>Maasai Mara Safari</h3>
         <p>3 Days, Full Board – From KES 30,000</p>
-        <button onclick="openBookingModal()">Book Now</button>
+        <button onclick="openBookingModal()">Book Now</button><br><button onclick="location.href='Masai-Mara-From-Tristan-2011-003.jpg.webp'">Details</button>
       </div>
     </div>
-
+    <div class="package-card">
+      <img src="MAASAI MARA FAIR FINAL JP.jpg" alt="">
+      <div class="package-info">
+        <h3></h3>
+        <p>Days, Full Board – From KES </p>
+        <button onclick="openBookingModal()">Book Now</button><br><button onclick="location.href='MAASAI MARA FAIR FINAL JP.jpg'">Details</button>
+      </div>
+    </div>
+    <div class="package-card">
+      <img src="kidsfinal.jpg" alt="">
+      <div class="package-info">
+        <h3>Colour Fest</h3>
+        <p>Days, Full Board – From KES </p>
+        <button onclick="openBookingModal()">Book Now</button><br><button onclick="location.href='kidsfinal.jpg'">Details</button>
+      </div>
+    </div>
+    <div class="package-card">
+      <img src="" alt="">
+      <div class="package-info">
+        <h3></h3>
+        <p>Days, Full Board – From KES </p>
+        <button onclick="openBookingModal()">Book Now</button><br><button onclick="location.href='kidsfinal.jpg'">Details</button>
+      </div>
+    </div>
+    <div class="package-card">
+      <img src="OLKARIA.jpg" alt="">
+      <div class="package-info">
+        <h3>Olkaria Day Rip</h3>
+        <p>1Days, Full Board – From KES </p>
+        <button onclick="openBookingModal()">Book Now</button><br><button onclick="location.href='OLKARIA.jpg'">Details</button>
+      </div>
+    </div>
+     
     <div class="package-card">
       <img src="dubai.jpg" alt="Dubai Tour">
       <div class="package-info">
         <h3>Dubai City Tour</h3>
         <p>5 Days, hotel + shopping tour – From $1,400</p>
-        <button onclick="openBookingModal()">Book Now</button>
+        <button onclick="openBookingModal()">Book Now</button><br><button onclick="location.href='dubai.jpg'">Details</button>
       </div>
     </div>
   </div>
+ 
 
   <script>
     // Open the Booking Modal
@@ -190,13 +225,15 @@
 
     // Redirect to a form (you can create your own form later)
     function openForm() {
-      window.location.href = "bookingForm.html"; // Replace with your form URL
+      window.location.href = "payment.html"; // Replace with your form URL
     }
 
     // Open WhatsApp chat
     function openWhatsApp() {
-      window.open('https://wa.me/254723010578?text=Hi!%20I%20would%20like%20to%20book%20my%20trip', '_blank');
+      window.open('https://wa.me/254708902119?text=Hi!%20I%20would%20like%20to%20book%20my%20trip', '_blank');
     }
+   
+
     function filterPackages() {
   const input = document.getElementById("searchInput").value.toLowerCase();
   const cards = document.querySelectorAll(".package-card");
@@ -216,22 +253,23 @@
       <h2>Choose Your Booking Option</h2>
       <p>Select how you'd like to proceed with booking your trip:</p>
       <div class="booking-options">
-        <button onclick="openForm()">Fill a Booking Form</button>
+        <button onclick="openForm()">Proceed To Pay</button>
         <button onclick="openWhatsApp()">Contact on WhatsApp</button>
       </div>
     </div>
   </div>
 
   <footer style="background: #001f37; color: white; text-align: center; padding: 30px 10px;">
-    <p>📧 info@kwetutours.com | ☎️ +254 712 345678</p>
+    <p>📧 info@kwetutours.com | ☎️ +254 70890119</p>
     <p>Follow us on 
       <a href="#" style="color: #ffcccb;">Instagram</a>, 
       <a href="#" style="color: #ffcccb;">Facebook</a>, 
       <a href="#" style="color: #ffcccb;">TikTok</a>
     </p>
-    <p>&copy; 2025 Kwetu Tours & Travel. All rights reserved.</p>
+    <p>&copy; 2025 H.Kwetu Tours & Travel. All rights reserved.</p>
   </footer>
   
   
 </body>
 </html>
+
