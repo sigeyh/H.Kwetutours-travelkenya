@@ -136,6 +136,34 @@
         </div>
     </div>
 </section>
+    <section class="testimonials-section">
+    <h2>Leave Your Review</h2>
+
+    <div class="container">
+        <form id="reviewForm" class="row g-3">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="location" class="form-label">Your Location</label>
+                <input type="text" class="form-control" id="location" placeholder="Enter your location" required>
+            </div>
+            <div class="col-12">
+                <label for="review" class="form-label">Your Review</label>
+                <textarea class="form-control" id="review" rows="4" placeholder="Share your experience" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary" style="background-color: #9b3232; border: none;">Submit Review</button>
+            </div>
+        </form>
+
+        <div id="submittedReviews" class="mt-5">
+            <!-- New reviews will appear here -->
+        </div>
+    </div>
+</section>
+
 
 <footer>
     <p>📧 info@kwetutours.com | ☎️ +254 708902119</p>
@@ -148,5 +176,32 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.getElementById('reviewForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Get form values
+    var name = document.getElementById('name').value;
+    var location = document.getElementById('location').value;
+    var review = document.getElementById('review').value;
+
+    // Create a new testimonial card
+    var newReview = document.createElement('div');
+    newReview.classList.add('testimonial-card', 'mt-4');
+    newReview.innerHTML = `
+        <div class="quote">"New Experience!"</div>
+        <p>"${review}"</p>
+        <div class="customer-name">${name}</div>
+        <div class="customer-location">${location}</div>
+    `;
+
+    // Add to the page
+    document.getElementById('submittedReviews').appendChild(newReview);
+
+    // Reset the form
+    document.getElementById('reviewForm').reset();
+});
+</script>
+
 </body>
 </html>
