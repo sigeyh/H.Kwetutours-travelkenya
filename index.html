@@ -390,16 +390,396 @@ body {
   </style>
 </head>
 <body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kwetu | Tours & Travel</title>
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Explore unforgettable local and international adventures with Kwetu Tours & Travel. Book safaris, beach holidays, and exotic getaways today.">
+    <meta name="keywords" content="Kwetu Tours, Kenya Travel, African Safaris, Diani Beach, Masai Mara, Zanzibar Holidays, International Travel, Travel Packages">
+    <meta name="author" content="Kwetu Tours & Travel">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Kwetu Tours & Travel - Explore the World">
+    <meta property="og:description" content="Unleash your adventure spirit with Kwetu. From African safaris to luxury getaways, we’ve got you covered.">
+    <meta property="og:image" content="https://yourdomain.com/preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:type" content="website">
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kwetu Tours & Travel - Explore the World">
+    <meta name="twitter:description" content="Unforgettable tours, exotic destinations, and budget-friendly travel deals.">
+    <meta name="twitter:image" content="https://yourdomain.com/preview.jpg">
+  
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to top left, #9b3232, #001f37);
+      font-family: Arial, sans-serif;
+      color: #fcfcfc;
+    }
+
+    .logo-section {
+      background-color: rgb(235, 239, 243);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .logo-box {
+      background-color: rgb(88, 128, 163);
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-box img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+      margin: 0;
+    }
+
+    h3 {
+      color: white;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .text-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    /* Section and Articles for Travel Places */
+    section.places {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    article.place {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    article.place:hover {
+      transform: scale(1.1);
+    }
+
+    article.place img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    article.place .content {
+      padding: 15px;
+    }
+
+    article.place h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    article.place p {
+      font-size: 14px;
+      color: #ddd;
+    }
+    .bonfire-style {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.bonfire-style .banner {
+  margin-bottom: 40px;
+}
+
+.bonfire-style .banner h2 {
+  font-size: 32px;
+  color: #9b3232;
+  margin-bottom: 10px;
+}
+
+.bonfire-style .banner p {
+  font-size: 16px;
+  color: #555;
+  
+}
+
+.bonfire-style .banner button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #001f37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bonfire-style .banner button:hover {
+  background-color: #003b6d;
+}
+
+.package-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.package-card {
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f3f3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card img {
+  width: 100%;
+  height: 180px;
+  transform: scale(1.4);
+  object-fit: contain;
+}
+
+.package-card h4 {
+  margin: 15px 10px 5px;
+  font-size: 18px;
+  color: #001f37;
+}
+
+.package-card p {
+  margin: 0 10px 15px;
+  font-size: 14px;
+  color: #666;
+}
+/* Carousel Styling Upgrade */
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel .slide {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel .slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .caption {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0,0,0,0.5);
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.carousel .caption h3 {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+
+.carousel .caption p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Arrows */
+.carousel button.prev,
+.carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel button.prev { left: 10px; }
+.carousel button.next { right: 10px; }
+
+/* Dot Indicators */
+.indicators {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  z-index: 1;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    /* Logo Section */
+    .logo-section {
+      background-color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-left img {
+      height: 60px;
+      width: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .brand-text span:first-child {
+      font-size: 28px;
+      font-weight: bold;
+      color: #9b3232;
+    }
+
+    .brand-text span:last-child {
+      font-size: 14px;
+      color: #001f37;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #9b3232;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section Example */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-image: url('your-hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+
+  </style>
+</head>
+<body>
     <div class="logo-section">
         <div class="logo-left">
-          <img src="logo.jpg" alt="Kwetu Logo">
+          <img src="KWETU TOURS.png" alt="Kwetu Logo">
           <div class="brand-text">
             <span>KWETU</span>
             <span>Tours & Travel</span>
           </div>
         </div>
         <div class="contact-info">
-        
+          <strong>📞 +254 708902119</strong> | <strong>📧 info@kwetutours.com<br>  <p>WhatsApp Group: 
+            <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank" style="color: #25D366;">
+                Click here to join
             </a>
         </p></strong>
         </div>
@@ -407,10 +787,10 @@ body {
     
       <!-- Navigation Bar -->
       <nav>
-        <a href="live.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="packages.html">Packages</a>
         <a href="aboutus.html">About Us</a>
-      
+        <a href="#">Contact</a>
       </nav>
     
       <!-- Hero Section -->
@@ -428,7 +808,7 @@ body {
   <section class="places">
     <!-- Place 1 - Kenya -->
     <article class="place">
-      <img src="Masai-Mara-From-Tristan-2011-003.jpg.webp" alt="Masai Mara">
+      <img src="Africa-Kenya-Masai-Mara.jpg" alt="Masai Mara">
       <div class="content">
         <h4>Masai Mara, Kenya</h4>
         <p>Experience the Great Migration and the rich culture of the Maasai people in this world-famous game reserve.</p>
@@ -446,7 +826,7 @@ body {
 
     <!-- Place 3 - Abroad -->
     <article class="place">
-      <img src="eiffel-tower-paris-.webp" alt="Paris">
+      <img src="" alt="Paris">
       <div class="content">
         <h4>Paris, France</h4>
         <p>Visit the romantic city of lights, home to the Eiffel Tower, art museums, and world-class cuisine.</p>
@@ -473,21 +853,22 @@ body {
       <h2>Your Next Adventure Awaits</h2>
       <p>Discover amazing tour packages tailored just for you — local and international.</p>
       <button onclick="location.href='packages.html'">Explore Packages</button>
+      <button onclick="location.href='gallery.html'">Local Roadrip's</button>
     </div>
   
     <div class="package-list">
       <div class="package-card">
-        <img src="" alt="Santorini Package">
+        <img src="Africa-Kenya-Masai-Mara.jpg" alt="Santorini Package">
         <h4>Santorini Getaway</h4>
         <p>5 Days | Flights + Hotel | From $1,200</p>
       </div>
       <div class="package-card">
-        <img src="amboseli.jpg" alt="Amboseli Package">
+        <img src="diani-sea-resort.jpg" alt="Amboseli Package">
         <h4>Amboseli Safari</h4>
         <p>3 Days | All Inclusive | From KES 25,000</p>
       </div>
       <div class="package-card">
-        <img src="zanzibar.jpg" alt="Zanzibar Package">
+        <img src="" alt="Zanzibar Package">
         <h4>Zanzibar Escape</h4>
         <p>4 Days | Flights + Resort | From $900</p>
       </div>
@@ -498,26 +879,41 @@ body {
 <section class="carousel-section">
     <div class="carousel">
       <div class="slide active">
-        <img src="safari.jpg" alt="Safari Adventure">
+        <img src="Africa-Kenya-Masai-Mara.jpg" alt="Safari Adventure">
         <div class="caption">
           <h3>Safari Adventure</h3>
           <p>Explore Kenya's majestic wildlife in the heart of the savannah.</p>
         </div>
       </div>
       <div class="slide">
-        <img src="" alt="Beach Getaway">
+        <img src="diani-sea-resort.jpg" alt="Beach Getaway">
         <div class="caption">
           <h3>Diani Beach Escape</h3>
           <p>Soak up the sun and swim in crystal-clear waters.</p>
         </div>
       </div>
       <div class="slide">
-        <img src="" alt="City Tour">
+        <img src="eiffel-tower-paris-.webp" alt="City Tour">
         <div class="caption">
           <h3>Dubai City Lights</h3>
           <p>Skyscrapers, shopping, and culture in the desert oasis.</p>
         </div>
       </div>
+      <div class="slide">
+        <img src="Masai-Mara-From-Tristan-2011-003.jpg.webp" alt="Safari Adventure">
+        <div class="caption">
+          <h3>Safari Adventure</h3>
+          <p>Explore Kenya's majestic wildlife in the heart of the savannah.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="DJI_0936.jpg" alt="Safari Adventure">
+        <div class="caption">
+          <h3>Roadrip</h3>
+          <p>Explore Kenya.</p>
+        </div>
+      </div>
+
   
       <!-- Arrows -->
       <button class="prev" onclick="changeSlide(-1)">❮</button>
@@ -568,7 +964,7 @@ body {
   <section style="padding: 40px 20px; text-align: center; background-color: #fff;">
     <h2 style="color: #001f37;">Watch Our Travel Highlights</h2>
     <video controls width="90%" style="max-width: 720px; border-radius: 12px; margin-top: 20px;">
-      <source src="travel-highlights.mp4" type="video/mp4">
+      <source src="Jose_Jose_-_Omwochi_Kokass__Official_Music_Video_4k_(360p).mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </section>
@@ -599,11 +995,10 @@ body {
    <footer style="background: #001f37; color: white; text-align: center; padding: 30px 10px;">
     <p>📧 info@kwetutours.com | ☎️ +254 708902119</p>
     <p>Follow us on 
+      <a href="reviews.html">Reviews</a>,
       <a href="#" style="color: #ffcccb;">Instagram</a>, 
       <a href="#" style="color: #ffcccb;">Facebook</a>, 
       <a href="#" style="color: #ffcccb;">TikTok</a>
-      <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank" style="color: #25D366;">
-                Click here to join
     </p>
     <p>&copy; 2025 Kwetu Tours & Travel. All rights reserved.</p>
   </footer>
